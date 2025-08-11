@@ -363,18 +363,3 @@ POST /api/v1/recommendations
 This project is proprietary software developed for WingsRUs restaurant chain. All rights reserved.
 
 ---
-
-## Getting Started Checklist
-
-- Install Python 3.8+
-- Setup PostgreSQL database
-- Install dependencies: `pip install -r requirements_complete.txt`
-- Configure database connection
-- Run database setup: `python database_setup.py`
-- Test visualization: `python visualization_module.py`
-- Run complete system: `python integrated_system.py`
-- Review generated outputs
-- Customize for your data
-- Deploy to production
-
-**Ready to revolutionize your restaurant's recommendations? Let's get started! **
