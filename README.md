@@ -1,30 +1,69 @@
-# WingsRUs AI-Powered Recommendation System 🚀
+% Preparing document class and basic settings
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+\geometry{a4paper, margin=1in}
+\usepackage{parskip}
+\usepackage{enumitem}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{titlesec}
 
-A comprehensive, enterprise-grade recommendation system for WingsRUs restaurant chain, featuring AI-powered menu recommendations, advanced analytics, and business intelligence dashboards.
+% Setting up code listing style
+\lstset{
+    basicstyle=\ttfamily\small,
+    breaklines=true,
+    frame=single,
+    backgroundcolor=\color{gray!10},
+    keywordstyle=\color{blue},
+    commentstyle=\color{green!60!black},
+    stringstyle=\color{red}
+}
 
-## 🎯 Project Overview
+% Configuring title formats
+\titleformat{\section}{\large\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}{\normalsize\bfseries}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}{\normalsize\itshape}{\thesubsubsection}{1em}{}
 
+% Setting up font (Latin Modern)
+\usepackage{lmodern}
+
+% Beginning document
+\begin{document}
+
+% Creating title
+\title{WingsRUs AI-Powered Recommendation System}
+\maketitle
+
+% Project Overview
+\section{Project Overview}
 The WingsRUs Recommendation System analyzes customer behavior patterns from 1.4M+ orders to provide intelligent menu recommendations, driving increased sales and customer satisfaction.
 
-### Key Features
-- **AI-Powered Recommendations**: Hybrid recommendation engine using collaborative filtering and content-based approaches
-- **PostgreSQL Database**: Robust data storage with advanced querying capabilities
-- **Advanced Visualizations**: Interactive charts and business dashboards using Plotly, Matplotlib, and Seaborn
-- **Business Intelligence**: Comprehensive analytics and ROI calculations
-- **Google Colab Integration**: Cloud-based development and analysis environment
-- **PowerPoint Generation**: Automated presentation creation for stakeholders
+% Key Features
+\section{Key Features}
+\begin{itemize}
+    \item \textbf{AI-Powered Recommendations:} Hybrid recommendation engine using collaborative filtering and content-based approaches
+    \item \textbf{PostgreSQL Database:} Robust data storage with advanced querying capabilities
+    \item \textbf{Advanced Visualizations:} Interactive charts and business dashboards using Plotly, Matplotlib, and Seaborn
+    \item \textbf{Business Intelligence:} Comprehensive analytics and ROI calculations
+    \item \textbf{Google Colab Integration:} Cloud-based development and analysis environment
+    \item \textbf{PowerPoint Generation:} Automated presentation creation for stakeholders
+\end{itemize}
 
-## 🏗️ Tech Stack
+% Tech Stack
+\section{Tech Stack}
+\subsection{Core Technologies}
+\begin{itemize}
+    \item \textbf{Database:} PostgreSQL 13+ with SQLAlchemy ORM
+    \item \textbf{Backend:} Python 3.8+ with advanced data processing
+    \item \textbf{AI/ML:} Scikit-learn, TF-IDF, Cosine Similarity
+    \item \textbf{Visualization:} Matplotlib, Seaborn, Plotly, Bokeh
+    \item \textbf{Cloud:} Google Colab for development and analysis
+\end{itemize}
 
-### Core Technologies
-- **Database**: PostgreSQL 13+ with SQLAlchemy ORM
-- **Backend**: Python 3.8+ with advanced data processing
-- **AI/ML**: Scikit-learn, TF-IDF, Cosine Similarity
-- **Visualization**: Matplotlib, Seaborn, Plotly, Bokeh
-- **Cloud**: Google Colab for development and analysis
-
-### Key Libraries
-```python
+\subsection{Key Libraries}
+\begin{lstlisting}
 # Data Processing
 pandas>=1.5.0, numpy>=1.21.0, scikit-learn>=1.1.0
 
@@ -36,53 +75,55 @@ matplotlib>=3.5.0, seaborn>=0.11.0, plotly>=5.0.0
 
 # Presentation
 python-pptx==0.6.21
-```
+\end{lstlisting}
 
-## 📁 Project Structure
-
-```
+% Project Structure
+\section{Project Structure}
+\begin{lstlisting}
 WWT/
-├── 📊 Core System
+├── Core System
 │   ├── WingsRUs_Recommendation_System.py      # Main recommendation engine
 │   ├── database_setup.py                      # PostgreSQL setup and management
 │   ├── visualization_module.py                # Advanced visualization system
 │   └── integrated_system.py                  # Complete system integration
 │
-├── 📈 Data Files
+├── Data Files
 │   ├── store_data.csv                         # Store information
 │   ├── customer_data.csv                      # Customer profiles
 │   ├── order_data.csv                         # Order history (1.4M+ records)
 │   └── test_data_question.csv                # Test scenarios
 │
-├── 🎨 Google Colab
+├── Google Colab
 │   └── WingsRUs_Recommendation_System_Colab.ipynb  # Cloud development notebook
 │
-├── 📊 Analysis & Outputs
+├── Analysis & Outputs
 │   ├── COMPREHENSIVE_ANALYSIS_REPORT.md      # Detailed analysis report
 │   ├── recommendation_output.csv              # Recommendation results
 │   ├── recommendation_output.xlsx             # Excel format results
 │   └── visualization_outputs/                 # Generated charts
 │
-├── 📝 Presentation
+├── Presentation
 │   ├── create_presentation.py                # PowerPoint generator
 │   ├── presentation_outline.md               # Presentation structure
 │   └── Presentation_Script.md                # Presentation content
 │
-└── 📋 Configuration
+└── Configuration
     ├── requirements.txt                       # Basic dependencies
     ├── requirements_complete.txt              # Complete dependencies
     └── README.md                             # This file
-```
+\end{lstlisting}
 
-## 🚀 Quick Start
+% Quick Start
+\section{Quick Start}
+\subsection{Prerequisites}
+\begin{itemize}
+    \item Python 3.8+
+    \item PostgreSQL 13+
+    \item Git
+\end{itemize}
 
-### 1. Prerequisites
-- Python 3.8+
-- PostgreSQL 13+
-- Git
-
-### 2. Installation
-```bash
+\subsection{Installation}
+\begin{lstlisting}
 # Clone the repository
 git clone <repository-url>
 cd WWT
@@ -92,10 +133,10 @@ pip install -r requirements_complete.txt
 
 # Setup PostgreSQL database
 python database_setup.py
-```
+\end{lstlisting}
 
-### 3. Run the Complete System
-```bash
+\subsection{Run the Complete System}
+\begin{lstlisting}
 # Run integrated system
 python integrated_system.py
 
@@ -103,32 +144,33 @@ python integrated_system.py
 python WingsRUs_Recommendation_System.py
 python visualization_module.py
 python create_presentation.py
-```
+\end{lstlisting}
 
-## 🔧 Database Setup
-
-### PostgreSQL Configuration
-```python
+% Database Setup
+\section{Database Setup}
+\subsection{PostgreSQL Configuration}
+\begin{lstlisting}
 # Default database settings
 host = 'localhost'
 port = 5432
 database = 'wingsrus_db'
 user = 'postgres'
 password = 'your_password'
-```
+\end{lstlisting}
 
-### Database Schema
-- **stores**: Store information and locations
-- **customers**: Customer profiles and types
-- **orders**: Order history and details
-- **recommendations**: Generated recommendations
+\subsection{Database Schema}
+\begin{itemize}
+    \item \textbf{stores:} Store information and locations
+    \item \textbf{customers:} Customer profiles and types
+    \item \textbf{orders:} Order history and details
+    \item \textbf{recommendations:} Generated recommendations
+\end{itemize}
 
-## �� System Components
-
-### 1. Recommendation Engine
+% System Components
+\section{System Components}
+\subsection{Recommendation Engine}
 The core AI system that analyzes customer behavior and generates personalized recommendations:
-
-```python
+\begin{lstlisting}
 from WingsRUs_Recommendation_System import AdvancedRecommender
 
 # Initialize recommender
@@ -139,18 +181,19 @@ recommendations = recommender.recommend(
     cart_items=['Buffalo Wings'],
     customer_type='VIP'
 )
-```
+\end{lstlisting}
 
-**Features:**
-- Hybrid recommendation strategies
-- Customer type personalization
-- Category complementarity analysis
-- Similarity-based suggestions
+\textbf{Features:}
+\begin{itemize}
+    \item Hybrid recommendation strategies
+    \item Customer type personalization
+    \item Category complementarity analysis
+    \item Similarity-based suggestions
+\end{itemize}
 
-### 2. Visualization Module
+\subsection{Visualization Module}
 Comprehensive visualization system for business intelligence:
-
-```python
+\begin{lstlisting}
 from visualization_module import WingsRUsVisualizer
 
 # Initialize visualizer
@@ -160,18 +203,19 @@ visualizer = WingsRUsVisualizer()
 visualizer.generate_visualization_report(
     store_data, customer_data, order_data
 )
-```
+\end{lstlisting}
 
-**Capabilities:**
-- Interactive Plotly dashboards
-- Business impact analysis
-- ROI calculations
-- Performance metrics
+\textbf{Capabilities:}
+\begin{itemize}
+    \item Interactive Plotly dashboards
+    \item Business impact analysis
+    \item ROI calculations
+    \item Performance metrics
+\end{itemize}
 
-### 3. Database Manager
+\subsection{Database Manager}
 PostgreSQL database setup and management:
-
-```python
+\begin{lstlisting}
 from database_setup import DatabaseManager
 
 # Initialize database
@@ -181,95 +225,117 @@ db = DatabaseManager(host, port, database, user, password)
 db.create_database()
 db.create_tables()
 db.migrate_csv_data()
-```
+\end{lstlisting}
 
-## 📈 Business Impact
+% Business Impact
+\section{Business Impact}
+\subsection{Current Performance}
+\begin{itemize}
+    \item \textbf{Total Orders Analyzed:} 1.4M+
+    \item \textbf{Customer Base:} 100K+ customers
+    \item \textbf{Store Network:} 10+ locations
+    \item \textbf{Revenue:} \$35M+ annually
+\end{itemize}
 
-### Current Performance
-- **Total Orders Analyzed**: 1.4M+
-- **Customer Base**: 100K+ customers
-- **Store Network**: 10+ locations
-- **Revenue**: $35M+ annually
+\subsection{Projected Impact with AI Recommendations}
+\begin{itemize}
+    \item \textbf{Daily Revenue Increase:} \$1,274
+    \item \textbf{Annual Revenue Potential:} \$465K+
+    \item \textbf{ROI:} 930\%+ return on investment
+    \item \textbf{Implementation Cost:} \$50K
+\end{itemize}
 
-### Projected Impact with AI Recommendations
-- **Daily Revenue Increase**: $1,274
-- **Annual Revenue Potential**: $465K+
-- **ROI**: 930%+ return on investment
-- **Implementation Cost**: $50K
+\subsection{Key Metrics}
+\begin{itemize}
+    \item \textbf{Conversion Rate:} 15\% of recommendations convert to sales
+    \item \textbf{Average Recommendation Value:} \$8.00 per item
+    \item \textbf{Customer Satisfaction:} Expected 25\% improvement
+    \item \textbf{Order Value:} 18\% increase in average order size
+\end{itemize}
 
-### Key Metrics
-- **Conversion Rate**: 15% of recommendations convert to sales
-- **Average Recommendation Value**: $8.00 per item
-- **Customer Satisfaction**: Expected 25% improvement
-- **Order Value**: 18% increase in average order size
-
-## 🎨 Visualization Examples
-
+% Visualization Examples
+\section{Visualization Examples}
 The system generates comprehensive visualizations including:
 
-1. **Data Overview Dashboard**
-   - Store distribution by state
-   - Customer type distribution
-   - Order volume analysis
-   - Performance metrics
+\subsection{Data Overview Dashboard}
+\begin{itemize}
+    \item Store distribution by state
+    \item Customer type distribution
+    \item Order volume analysis
+    \item Performance metrics
+\end{itemize}
 
-2. **Recommendation Analysis**
-   - Category distribution
-   - Recommendation frequency
-   - System performance metrics
-   - Business impact charts
+\subsection{Recommendation Analysis}
+\begin{itemize}
+    \item Category distribution
+    \item Recommendation frequency
+    \item System performance metrics
+    \item Business impact charts
+\end{itemize}
 
-3. **Interactive Dashboards**
-   - Plotly-based interactive charts
-   - Real-time data exploration
-   - Customizable views
-   - Export capabilities
+\subsection{Interactive Dashboards}
+\begin{itemize}
+    \item Plotly-based interactive charts
+    \item Real-time data exploration
+    \item Customizable views
+    \item Export capabilities
+\end{itemize}
 
-## 🌐 Google Colab Integration
-
+% Google Colab Integration
+\section{Google Colab Integration}
 Access the complete system in Google Colab:
+\begin{enumerate}
+    \item Upload the notebook: \texttt{WingsRUs\_Recommendation\_System\_Colab.ipynb}
+    \item Install dependencies: Run the setup cell
+    \item Upload your data: Use the file upload functionality
+    \item Run analysis: Execute cells sequentially
+    \item Generate insights: Create visualizations and reports
+\end{enumerate}
 
-1. **Upload the notebook**: `WingsRUs_Recommendation_System_Colab.ipynb`
-2. **Install dependencies**: Run the setup cell
-3. **Upload your data**: Use the file upload functionality
-4. **Run analysis**: Execute cells sequentially
-5. **Generate insights**: Create visualizations and reports
+\textbf{Benefits:}
+\begin{itemize}
+    \item Cloud-based processing
+    \item No local setup required
+    \item Collaborative development
+    \item GPU acceleration support
+\end{itemize}
 
-**Benefits:**
-- Cloud-based processing
-- No local setup required
-- Collaborative development
-- GPU acceleration support
+% Data Analysis Pipeline
+\section{Data Analysis Pipeline}
+\begin{enumerate}
+    \item \textbf{Data Ingestion}
+        \begin{itemize}
+            \item CSV file processing
+            \item Database migration
+            \item Data validation and cleaning
+        \end{itemize}
+    \item \textbf{Feature Engineering}
+        \begin{itemize}
+            \item Customer behavior analysis
+            \item Order pattern extraction
+            \item Item categorization
+            \item Similarity calculations
+        \end{itemize}
+    \item \textbf{Model Training}
+        \begin{itemize}
+            \item TF-IDF vectorization
+            \item Cosine similarity computation
+            \item Business rule integration
+            \item Performance optimization
+        \end{itemize}
+    \item \textbf{Recommendation Generation}
+        \begin{itemize}
+            \item Multi-strategy approach
+            \item Personalization logic
+            \item Category complementarity
+            \item Business constraint validation
+        \end{itemize}
+\end{enumerate}
 
-## 📊 Data Analysis Pipeline
-
-### 1. Data Ingestion
-- CSV file processing
-- Database migration
-- Data validation and cleaning
-
-### 2. Feature Engineering
-- Customer behavior analysis
-- Order pattern extraction
-- Item categorization
-- Similarity calculations
-
-### 3. Model Training
-- TF-IDF vectorization
-- Cosine similarity computation
-- Business rule integration
-- Performance optimization
-
-### 4. Recommendation Generation
-- Multi-strategy approach
-- Personalization logic
-- Category complementarity
-- Business constraint validation
-
-## 🔍 Testing & Validation
-
-### Test Scenarios
-```python
+% Testing & Validation
+\section{Testing \& Validation}
+\subsection{Test Scenarios}
+\begin{lstlisting}
 # Sample test orders
 test_carts = [
     ['Buffalo Wings'],
@@ -282,99 +348,28 @@ test_carts = [
 for cart in test_carts:
     recs = recommender.recommend(cart)
     print(f"Cart: {cart} → Recommendations: {recs}")
-```
+\end{lstlisting}
 
-### Performance Metrics
-- **Accuracy**: 87% recommendation relevance
-- **Coverage**: 95% menu item coverage
-- **Diversity**: 3+ unique categories per recommendation
-- **Response Time**: <100ms per recommendation
+\subsection{Performance Metrics}
+\begin{itemize}
+    \item \textbf{Accuracy:} 87\% recommendation relevance
+    \item \textbf{Coverage:} 95\% menu item coverage
+    \item \textbf{Diversity:} 3+ unique categories per recommendation
+    \item \textbf{Response Time:} <100ms per recommendation
+\end{itemize}
 
-## 🚀 Deployment
+% Deployment
+\section{Deployment}
+\subsection{Production Setup}
+\begin{enumerate}
+    \item \textbf{Database:} Configure production PostgreSQL instance
+    \item \textbf{API:} Deploy recommendation engine as REST API
+    \item \textbf{Monitoring:} Implement logging and performance tracking
+    \item \textbf{Scaling:} Configure load balancing and caching
+\end{enumerate}
 
-### Production Setup
-1. **Database**: Configure production PostgreSQL instance
-2. **API**: Deploy recommendation engine as REST API
-3. **Monitoring**: Implement logging and performance tracking
-4. **Scaling**: Configure load balancing and caching
-
-### Integration Points
-- **POS Systems**: Real-time recommendation integration
-- **Mobile Apps**: Customer-facing recommendation display
-- **Analytics**: Business intelligence dashboard integration
-- **Marketing**: Personalized promotion engine
-
-## 📝 Documentation
-
-### Additional Resources
-- `COMPREHENSIVE_ANALYSIS_REPORT.md`: Detailed technical analysis
-- `presentation_outline.md`: Presentation structure
-- `Presentation_Script.md`: Complete presentation content
-- `database_setup.py`: Database configuration details
-
-### API Documentation
-```python
-# Recommendation API
-POST /api/v1/recommendations
-{
-    "cart_items": ["Buffalo Wings"],
-    "customer_type": "VIP",
-    "max_recommendations": 3
-}
-
-# Response
-{
-    "recommendations": ["Ranch Dip", "French Fries", "Coke"],
-    "confidence": 0.87,
-    "categories": ["Dips", "Sides", "Beverages"]
-}
-```
-
-## 🤝 Contributing
-
-### Development Setup
-1. Fork the repository
-2. Create feature branch
-3. Implement changes
-4. Add tests
-5. Submit pull request
-
-### Code Standards
-- Python PEP 8 compliance
-- Comprehensive documentation
-- Unit test coverage
-- Performance optimization
-
-## 📞 Support
-
-### Contact Information
-- **Project Lead**: AI Development Team
-- **Technical Support**: [Email/Contact]
-- **Documentation**: [Wiki/Link]
-
-### Issue Reporting
-- Use GitHub Issues for bug reports
-- Include detailed error messages
-- Provide system configuration details
-- Attach relevant log files
-
-## 📄 License
-
-This project is proprietary software developed for WingsRUs restaurant chain. All rights reserved.
-
----
-
-## 🎉 Getting Started Checklist
-
-- [ ] Install Python 3.8+
-- [ ] Setup PostgreSQL database
-- [ ] Install dependencies: `pip install -r requirements_complete.txt`
-- [ ] Configure database connection
-- [ ] Run database setup: `python database_setup.py`
-- [ ] Test visualization: `python visualization_module.py`
-- [ ] Run complete system: `python integrated_system.py`
-- [ ] Review generated outputs
-- [ ] Customize for your data
-- [ ] Deploy to production
-
-**Ready to revolutionize your restaurant's recommendations? Let's get started! 🚀**
+\subsection{Integration Points}
+\begin{itemize}
+    \item \textbf{POS Systems:} Real-time recommendation integration
+    \item \textbf{Mobile Apps:} Customer-facing recommendation display
+    \item \textbf{Analytics:} Business
